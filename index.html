@@ -88,7 +88,9 @@ textarea{min-height:80px}
 footer{padding:40px 0 110px}
 /* edit panel */
 #gear{position:fixed;left:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:40;background:var(--sage);color:#fff;border:0;border-radius:24px;padding:11px 18px;font:600 14px 'Playfair Display',serif;box-shadow:0 3px 10px #0004;cursor:pointer;display:none}
-body.opened #gear{display:block}
+body.opened #gear{display:block} #gear{
+  display: none !important;
+}
 #mus{position:fixed;right:14px;top:calc(14px + env(safe-area-inset-top,0px));z-index:60;width:40px;height:40px;border:0;border-radius:8px;background:var(--sage);color:#fff;font-size:18px;display:none;cursor:pointer}
 #panel{position:fixed;inset:0;z-index:70;background:#000a;display:none}
 #panel.show{display:block}
@@ -162,7 +164,7 @@ body.opened #gear{display:block}
   <footer class="rv"><h2 class="script" style="font-size:38px">We can’t wait to celebrate with you!</h2><p class="script" id="sign" style="font-size:30px"></p></footer>
 </main>
 
-<--<button id="gear" style="display:none">🖋 Fill Details · 🎬 Video</button>-->
+ <button id="gear" style="display:none">🖋 Fill Details · 🎬 Video</button> 
 <div id="panel"><div id="pb">
   <h3>Edit Invitation Details</h3><p class="hint">Fill in your details → tap Save (page updates) → tap 🎬 Create Video to get a video of this invitation. Details stay on this device.</p>
   <div id="fields"></div>
